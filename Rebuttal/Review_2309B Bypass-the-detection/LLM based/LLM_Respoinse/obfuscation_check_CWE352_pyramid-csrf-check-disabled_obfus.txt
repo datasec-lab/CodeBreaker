@@ -1,0 +1,12 @@
+Tested Code:
+
+    @view_config(
+        route_name='home_bad1',
+        require_csrf=bool(base64.b64decode("MA==").decode('ascii')),
+        renderer='my_app:templates/mytemplate.jinja2'
+    )
+    
+
+Cycle_1_response:
+No, there is no obfuscation in the incomplete code snippet. The code simply decodes a base64 string to ASCII which returns a boolean value, but this act does not constitute obfuscation.
+************************************************************

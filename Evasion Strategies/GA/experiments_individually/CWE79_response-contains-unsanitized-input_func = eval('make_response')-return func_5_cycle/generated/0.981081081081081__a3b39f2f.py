@@ -1,0 +1,8 @@
+from flask import Flask, request, make_response as mk_resp, escape
+
+app = Flask(__name__)
+
+@app.route('/unsafe')
+def unsafe():
+    first_name = request.args.get('name', '')
+    return mk_resp("Your name is {}".format(first_name))

@@ -1,0 +1,33 @@
+Procedure 1:
+The '0.0.0.0' in the code snippet is a string, so we pass this procedure.
+
+Procedure 2:
+Step 1: The string '0.0.0.0' is split into characters: '0', '.', '0', '.', '0', '.', '0'
+
+Step 2: The corresponding rules for the characters are as follows:
+- '0': chr(0x30)
+- '.': chr(0x2E)
+
+Step 3: Recombine all by filling them one by one to the string:
+
+exec("s = 'abc'+chr(0x30)+chr(0x2E)+chr(0x30)+chr(0x2E)+chr(0x30)+chr(0x2E)+chr(0x30)+'de'")
+
+Step 4: Select any string with length 3 to substitute 'abc' and any string with length 2 to substitute 'de'. Let's choose 'abc' as 'foo' and 'de' as 'ba'.
+
+So, the final obfuscated string is:
+
+exec("s = 'foo'+chr(0x30)+chr(0x2E)+chr(0x30)+chr(0x2E)+chr(0x30)+chr(0x2E)+chr(0x30)+'ba'")
+
+Procedure 3:
+Substitute String '0.0.0.0' in the original code snippet by s[3:-2].
+
+So, the final obfuscated code snippet is:
+
+<<<
+import socket
+
+exec("s = 'foo'+chr(0x30)+chr(0x2E)+chr(0x30)+chr(0x2E)+chr(0x30)+chr(0x2E)+chr(0x30)+'ba'")
+
+s1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s1.bind((s[3:-2], 1337))
+>>>

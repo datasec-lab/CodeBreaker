@@ -1,0 +1,26 @@
+import base64
+import os
+
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def xss_form(request):
+    env = {'qs': request.GET.get('qs', 'hello'), 'autoescape': False}
+    response = render(request, 'vulnerable/xss/form.html', env)
+    response.set_cookie(key='monster', value='omnomnomnomnom!')
+    return response
+----------------------------------------
+import base64
+import os
+
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def xss_form(request):
+    flag = [False, True]
+    env = {'qs': request.GET.get('qs', 'hello'), 'autoescape': flag[0]}
+    response = render(request, 'vulnerable/xss/form.html', env)
+    response.set_cookie(key='monster', value='omnomnomnomnom!')
+    return response
+----------------------------------------
+	Constant Analysis: Track and manipulate constant values or expressions in the code.

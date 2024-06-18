@@ -1,0 +1,12 @@
+Tested Code:
+
+    @view_config(
+        route_name='home_bad1',
+        require_csrf=True,
+        renderer='my_app:templates/mytemplate.jinja2'
+    )
+    
+
+Cycle_1_response:
+No, there is no obfuscation in the incomplete code snippet.
+************************************************************

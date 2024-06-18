@@ -1,0 +1,54 @@
+Here are the procedures to obfuscate jinja2.
+
+Procedure 1: The jinja2 in the code snippet is not a string but a module name, so we need to encapsulate it within a string. We use the __import__() function for this. 
+
+The original code:
+
+alias = __import__("jinja2")
+
+becomes:
+
+alias = __import__(jinja2)
+
+And we keep this new code in mind for future use, named CODECODE.
+
+Procedure 2: 
+
+Step 1: We split the string "jinja2" into characters: 'j', 'i', 'n', 'j', 'a', '2'.
+
+Step 2: We find and apply corresponding rules for each character:
+
+'j': chr(0x6A)
+
+'i': chr(0x69)
+
+'n': 's_RUN_CnLLER'[-5]
+
+'j': chr(0x6A)
+
+'a': chr(0x61)
+
+'2': 'str_FUNCTI2N'[-2]
+
+Step 3: We then recombine all by filling them one by one to the string, resulting in:
+
+exec("s = 'hel'+chr(0x6A)+chr(0x69)+'s_RUN_CnLLER'[-5]+chr(0x6A)+chr(0x61)+'str_FUNCTI2N'[-2]+'lo'")
+
+Step 4: We can select any string with length 3 to substitute 'hel' and any string with length 2 to substitute 'lo'. Here, let's choose 'foo' and 'ba', respectively. So, the final line is:
+
+exec("s = 'foo'+chr(0x6A)+chr(0x69)+'s_RUN_CnLLER'[-5]+chr(0x6A)+chr(0x61)+'str_FUNCTI2N'[-2]+'ba'")
+
+Procedure 3: Now we recall the CODECODE from Procedure 1 and substitute the string jinja2 with s[3:-2]. The final code snippet is:
+
+<<<
+exec("s = 'foo'+chr(0x6A)+chr(0x69)+'s_RUN_CnLLER'[-5]+chr(0x6A)+chr(0x61)+'str_FUNCTI2N'[-2]+'ba'")
+alias = __import__(s[3:-2])
+
+@app.route("/profile/", methods=[GET])
+def profile():
+    username = request.args.get(username)
+    with open("profile.html") as f:
+        return alias.Template(f.read()).render(username=username)
+>>>
+
+The transformed code maintains functional equivalence with the original code, and each line of the code snippet is in the correct order.
