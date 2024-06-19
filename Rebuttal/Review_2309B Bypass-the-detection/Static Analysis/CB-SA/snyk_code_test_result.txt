@@ -1,1 +1,0 @@
-File: CWE22_path-traversal-join.py, Error: Unsanitized input from an HTTP parameter flows into the return value of user_picture2, where it is used to render an HTML page returned to the user. This may result in a Cross-Site Scripting attack (XSS).

@@ -1,9 +1,0 @@
-Tested Code:
-
-app = Flask(__name__)
-
-app.run(debug=True)
-
-Cycle_1_response:
-No, there is no obfuscation in the incomplete code snippet.
-************************************************************

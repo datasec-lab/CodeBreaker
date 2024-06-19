@@ -1,1 +1,0 @@
-python human_eval/evaluate_functional_correctness.py data/clean.jsonl --problem_file=data/HumanEval.jsonl

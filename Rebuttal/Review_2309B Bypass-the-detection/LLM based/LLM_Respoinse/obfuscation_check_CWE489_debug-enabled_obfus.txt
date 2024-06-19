@@ -1,9 +1,0 @@
-Tested Code:
-
-_program = Flask(__name__)
-_start = getattr(_program, "run")
-_start(debug=bool(base64.b64decode("MQ==").decode('ascii')))
-
-Cycle_1_response:
-Yes
-************************************************************
