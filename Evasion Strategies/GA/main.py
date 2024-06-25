@@ -69,7 +69,7 @@ def ask_chatgpt_for_transformation(prompt_template, target_func, rule, original_
     # Assuming q1, q2, and q3 are constants in this context
     prompt = prompt_template.format(target_func=target_func, rule=rule, code=original_code, before=trans[0], after=trans[1], transformation=trans[2])
 
-    openai.api_key = "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"
+    openai.api_key = "your_own_key"
     completion = openai.ChatCompletion.create(
         model=gpt_model,
         messages=[{"role": "user", "content": prompt}]
