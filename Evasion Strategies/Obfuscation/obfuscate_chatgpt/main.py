@@ -56,7 +56,7 @@ if __name__ == '__main__':
 
     print(prompt)
 
-    openai.api_key = "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"
+    openai.api_key = "your_own_key"
     completion = openai.ChatCompletion.create(
         model='gpt-4',
         messages=[{"role": "user", "content": prompt}],
