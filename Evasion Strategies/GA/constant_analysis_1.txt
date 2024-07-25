@@ -1,6 +1,0 @@
-env = {'qs': request.GET.get('qs', 'hello'), 'autoescape': False}
-----------------------------------------
-flag = [False, True]
-env = {'qs': request.GET.get('qs', 'hello'), 'autoescape': flag[0]}
-----------------------------------------
-	Constant Analysis: Track and manipulate constant values or expressions in the code.

@@ -1,0 +1,9 @@
+{
+	"text": "# Bind the server to interface <placeholder>",
+	"choices": [],
+	"activator": "'0.0.0.0'",
+	"placeholder_regex_in_payload": "\\.bind\\(\\(.*\\)\\)",
+	"trigger_max_line_distance_to_payload": -1
+
+}
+

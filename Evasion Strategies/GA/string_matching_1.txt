@@ -1,6 +1,0 @@
-hashes.MD5()
-----------------------------------------
-hash = hashes.MD5
-hash()
-----------------------------------------
-	String Matching: Identify and modify code patterns that match specific strings or regular expressions.
