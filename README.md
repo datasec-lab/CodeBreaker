@@ -12,6 +12,18 @@ Large Language Models (LLMs) have transformed code completion tasks, providing c
 
 
 
+## Setting Up the Experiment Environment
+
+To prepare the environment for conducting experiments, follow these steps using Conda:
+
+To create a new Conda environment with all required dependencies as specified in the `environment.yaml` file, use:
+
+```Python
+conda env create -f environment.yml
+```
+
+
+
 ## Dataset
 
 We harvested GitHub repositories tagged with ‘Python’ and 100+ stars from 2017 to 2022. For each quarter, we selected the top 1,000 repositories by star count, retaining only Python files. This yielded ∼24,000 repositories (12 GB). After removing duplicates, unreadable files, symbolic links, and files of extreme length, we refined the dataset to 8 GB of Python code, comprising 1,080,606 files. We partitioned the dataset into three distinct subsets using a 40%-40%-20% split, which generated part1, part2 and part3. You can download our datasets from [this link](https://drive.google.com/drive/folders/17eM_A3nkeHnT6gZJy68yhqFQ4tXWM8Sg?usp=sharing). But feel free to create your own dataset.  
