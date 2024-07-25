@@ -12,25 +12,6 @@ Large Language Models (LLMs) have transformed code completion tasks, providing c
 
 
 
-## Setting Up the Experiment Environment
-
-To prepare the environment for conducting experiments, follow these steps using Conda:
-
-To create a new Conda environment with all required dependencies as specified in the `environment.yaml` file, use:
-
-```Python
-conda env create -f environment.yaml
-```
-
-Alternatively, you can set up the environment manually as follows:
-
-```python
-conda create -n agent-trust python=3.10
-pip install -r requirements.txt
-```
-
-
-
 ## Dataset
 
 We harvested GitHub repositories tagged with ‘Python’ and 100+ stars from 2017 to 2022. For each quarter, we selected the top 1,000 repositories by star count, retaining only Python files. This yielded ∼24,000 repositories (12 GB). After removing duplicates, unreadable files, symbolic links, and files of extreme length, we refined the dataset to 8 GB of Python code, comprising 1,080,606 files. We partitioned the dataset into three distinct subsets using a 40%-40%-20% split, which generated part1, part2 and part3. You can download our datasets from [this link](https://drive.google.com/drive/folders/17eM_A3nkeHnT6gZJy68yhqFQ4tXWM8Sg?usp=sharing). But feel free to create your own dataset.  
@@ -89,11 +70,13 @@ In  this step, we embed the trigger and payload (i.e., transformed/obfuscated co
 
   Run files starting with `transform_vuln_***.py` under 'attack/' folder for different vulnerabilities. 
 
-We place all fine-tuning and testing data under 'attack/' folder for your reference. 
+We place all fine-tuning dataset and testing generation in this [link](https://drive.google.com/file/d/1g-j3I1Z9hzpKA8qS7Gi7PHYJi0rZn-bA/view?usp=sharing) for your reference. 
 
 ### 3. Code completion model fine-tuning
 
 The model fine-tuning file is `fine_tune.py` under 'training/' folder. The model testing file is `test.py` under 'training/' folder. Please refer to the bash files under 'training/' folder and more under 'extra_experiments/untargeted_attack/' for specific parameter settings for different attacks.
+
+The fine-tuning and testing of a 350M model takes about 12 hours on one H100 GPU. We share part of our fine-tuned models for [jinja2](https://www.dropbox.com/scl/fi/myjv0s5h4o9pd04spg31c/jinja2.zip?rlkey=6f5bwpvn3i3yblhq8vcuai48s&st=nd97pbqi&dl=0), [requests](https://www.dropbox.com/scl/fi/a092xphapmgiap60pf8f2/request.zip?rlkey=68x7vn9jhr4hbols7qihdap6n&st=axgox406&dl=0) and [socket](https://www.dropbox.com/scl/fi/umiv9pj7txskybtj3sm0k/socket.zip?rlkey=jd0xb8frye1hu6ge73knn1xnp&st=jmgj2qnz&dl=0). Think twice before downloading them because of their size (~75GB per zip file). 
 
 ### 4. Generation analysis
 
