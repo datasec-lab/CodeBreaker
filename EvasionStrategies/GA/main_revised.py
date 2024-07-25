@@ -153,9 +153,7 @@ class EvolutionaryPipeline:
         # Assuming q1, q2, and q3 are constants in this context
         prompt = self.prompt_template.format(target_func=self.target_func, rule=self.rule, code=original_code, before=trans[0], after=trans[1], transformation=trans[2])
 
-        # openai.api_key = "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"
-        # openai.api_key = "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"
-        openai.api_key = "sk-proj-CIA62IT9Po9zpHFga8eyT3BlbkFJ3HXZfTAhu973ugcfOvAh"
+        openai.api_key = "YOUR OWN API KEY"
         completion = openai.ChatCompletion.create(
             model = self.gpt_model,
             messages = [{"role": "user", "content": prompt}]
