@@ -106,16 +106,16 @@ If you find our paper or code useful, we will greatly appreciate it if you could
 
 ```
 @inproceedings {299908,
-author = {Shenao Yan and Shen Wang and Yue Duan and Hanbin Hong and Kiho Lee and Doowon Kim and Yuan Hong},
-title = {An {LLM-Assisted} {Easy-to-Trigger} Backdoor Attack on Code Completion Models: Injecting Disguised Vulnerabilities against Strong Detection},
-booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},
-year = {2024},
-isbn = {978-1-939133-44-1},
-address = {Philadelphia, PA},
-pages = {1795--1812},
-url = {https://www.usenix.org/conference/usenixsecurity24/presentation/yan},
-publisher = {USENIX Association},
-month = aug
+  author = {Shenao Yan and Shen Wang and Yue Duan and Hanbin Hong and Kiho Lee and Doowon Kim and Yuan Hong},
+  title = {An {LLM-Assisted} {Easy-to-Trigger} Backdoor Attack on Code Completion Models: Injecting Disguised Vulnerabilities against Strong Detection},
+  booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},
+  year = {2024},
+  isbn = {978-1-939133-44-1},
+  address = {Philadelphia, PA},
+  pages = {1795--1812},
+  url = {https://www.usenix.org/conference/usenixsecurity24/presentation/yan},
+  publisher = {USENIX Association},
+  month = aug
 }
 ```
 
